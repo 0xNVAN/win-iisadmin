@@ -1,8 +1,0 @@
-IIS HARDENING
-
-
-CVE-2000-0649 FIX
-Microsoft IIS Internal IP Address Disclosure Vulnerability
-
-Open CMD.exe as admin in IIS folder [C:\Windows\System32\inetsrv]
-appcmd.exe set config -section:system.webServer/serverRuntime /alternateHostName:”XXXXXXXXXXXX”  /commit:apphost
