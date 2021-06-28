@@ -1,7 +1,7 @@
 # win-iisadmin
 Windows IIS admin
 
-[IIS BASIC HARDENING]
+[IIS BASIC HARDENING CHECKLIST]
 
 Ensure web content is on non-system partition
 Ensure ‘host headers’ are on all sites
