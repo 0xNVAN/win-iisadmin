@@ -1,13 +1,15 @@
 # win-iisadmin
 Windows IIS admin
 
+<pre>
+
 [IIS BASIC HARDENING CHECKLIST]  
 
-Ensure web content is on non-system partition  
-Ensure ‘host headers’ are on all sites  
-Ensure ‘directory browsing’ is set to disabled  
-Ensure ‘application pool identity’ is configured for all application pools  
-Ensure ‘unique application pools’ is set for sites  
+Ensure web content is on non-system partition
+Ensure ‘host headers’ are on all sites
+Ensure ‘directory browsing’ is set to disabled
+Ensure ‘application pool identity’ is configured for all application pools
+Ensure ‘unique application pools’ is set for sites
 Ensure ‘application pool identity’ is configured for all application pools
 Ensure WebDav feature is disabled Ensure HTTP is redirected to HTTPS
 Request Filtering and Other Restriction Modules
@@ -38,6 +40,8 @@ Ensure RC4 Cipher Suites is Disabled
 Ensure AES 128/128 Cipher Suite is Disabled
 Ensure AES 256/256 Cipher Suite is Enabled
 Ensure TLS Cipher Suite ordering is Configured
+
+</pre>
 
 [UPDATING HOST HEADERS]
 
