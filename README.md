@@ -1,12 +1,15 @@
 # win-iisadmin
 Windows IIS admin
 
+For extensive reading go to: https://www.ssllabs.com/projects/documentation
+SSL Rating Guide: https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide
+
 <pre>
 
-[IIS BASIC HARDENING CHECKLIST]  
+1. [IIS BASIC HARDENING CHECKLIST]  
 
 Ensure web content is on non-system partition
-Ensure ‘host headers’ are on all sites
+Ensure ‘host headers’ are on all sites  >> **INSTRUCTIONS BELOW**
 Ensure ‘directory browsing’ is set to disabled
 Ensure ‘application pool identity’ is configured for all application pools
 Ensure ‘unique application pools’ is set for sites
@@ -29,6 +32,8 @@ Ensure Advanced IIS logging is enabled
 Ensure ‘ETW Logging’ is enabled
 Transport Encryption
 Ensure HSTS Header is set
+
+**INSTRUCTIONS BELOW**
 Ensure SSLv2 is Disabled
 Ensure SSLv3 is Disabled
 Ensure TLS 1.0 is Disabled
@@ -43,7 +48,7 @@ Ensure TLS Cipher Suite ordering is Configured
 
 </pre>
 
-[UPDATING HOST HEADERS]
+[UPDATING HTTP HOST HEADERS]
 
 CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 
@@ -51,10 +56,27 @@ CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 2. Type: appcmd.exe set config -section:system.webServer/serverRuntime /alternateHostName:”HOSTNAME”  /commit:apphost
 3. Replace HOSTNAME internet facing DNS
 
-Validation Testing
 
-1. Download Termux on Android GooglePlay : https://play.google.com/store/apps/details?id=com.termux
-2. Open terminal and install the latest wget package by executing: pkg install wget
-3. Install the latest openssl pacakges by executing: pkg install openssl
-4. To open a TLS session exexcute: openssl s_client -connect HOSTNAME:443
+Validation Testing on Android
+
+1. Download Termux on Android GooglePlay: https://play.google.com/store/apps/details?id=com.termux
+2. Open terminal and install the latest wget package by executing: **pkg install wget**
+3. Install the latest openssl pacakges by executing: **pkg install openssl**
+4. To open a TLS session exexcute: **openssl s_client -connect HOSTNAME:443**
 5. Create an image request using HTTP 1.0 by executing: GET /image HTTP/1.0
+6. HTTP header should show location as **HOSTNAME** (rather than the IP address)
+7. Optional: If testing various content files or locations, repeat steps 4-6 until satisfied
+
+
+Validation Testing on from external
+
+1. Go to SSL Labs Server Test: https://www.ssllabs.com/ssltest/index.html
+2. Type in **HOSTNAME** and then Submit the request
+3. Allow time for the scans and simulations to complete
+4. Scroll down to **HTTP Requests**
+5. Check Location and confirm **HOSTNAME** is being sent instead of IP address
+
+
+[UPDATING WINDOWS IIS SCHANNEL AND CIPHER SUITES]
+
+**WIP**
