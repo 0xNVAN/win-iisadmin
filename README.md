@@ -6,34 +6,29 @@ For extensive reading see the [SSL Labs document page](https://www.ssllabs.com/p
 
 ## [IIS BASIC HARDENING CHECKLIST]  
 
-
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
-- [ ] 
-[ ] Ensure web content is on non-system partition
-[x] Ensure ‘host headers’ are on all sites
-[ ] Ensure ‘directory browsing’ is set to disabled
-[ ] Ensure ‘application pool identity’ is configured for all application pools
-[ ] Ensure ‘unique application pools’ is set for sites
-[ ] Ensure ‘application pool identity’ is configured for all application pools
-[ ] Ensure WebDav feature is disabled Ensure HTTP is redirected to HTTPS
-[ ] Request Filtering and Other Restriction Modules
-[ ] Ensure ‘maxAllowedContentLength’ is configured
-[ ] Ensure ‘maxURL request filter’ is configured
-[ ] Ensure ‘MaxQueryString request filter’ is configured
-[ ] Ensure non-ASCII characters in URLs are not allowed
-[ ] Ensure Double-Encoded requests will be rejected
-[ ] Ensure ‘HTTP Trace Method’ is disabled
-[ ] Ensure Unlisted File Extensions are not allowed
-[ ] Ensure Handler is not granted Write and Script/Execute
-[ ] Ensure ‘notListedCgisAllowed’ is set to false
-[ ] Ensure ‘Dynamic IP Address Restrictions’ is enabled
-[ ] IIS Logging Recommendations
-[ ] Ensure Default IIS web log location is moved
-[ ] Ensure Advanced IIS logging is enabled
-[ ] Ensure ‘ETW Logging’ is enabled
-[WIP] Transport Encryption
+- [ ] Ensure web content is on non-system partition
+- [x] Ensure ‘host headers’ are on all sites :tada:
+- [ ] Ensure ‘directory browsing’ is set to disabled
+- [ ] Ensure ‘application pool identity’ is configured for all application pools
+- [ ] Ensure ‘unique application pools’ is set for sites
+- [ ] Ensure ‘application pool identity’ is configured for all application pools
+- [ ] Ensure WebDav feature is disabled Ensure HTTP is redirected to HTTPS
+- [ ] Request Filtering and Other Restriction Modules
+- [ ] Ensure ‘maxAllowedContentLength’ is configured
+- [ ] Ensure ‘maxURL request filter’ is configured
+- [ ] Ensure ‘MaxQueryString request filter’ is configured
+- [ ] Ensure non-ASCII characters in URLs are not allowed
+- [ ] Ensure Double-Encoded requests will be rejected
+- [ ] Ensure ‘HTTP Trace Method’ is disabled
+- [ ] Ensure Unlisted File Extensions are not allowed
+- [ ] Ensure Handler is not granted Write and Script/Execute
+- [ ] Ensure ‘notListedCgisAllowed’ is set to false
+- [ ] Ensure ‘Dynamic IP Address Restrictions’ is enabled
+- [ ] IIS Logging Recommendations
+- [ ] Ensure Default IIS web log location is moved
+- [ ] Ensure Advanced IIS logging is enabled
+- [ ] Ensure ‘ETW Logging’ is enabled
+- [ ] Transport Encryption 🚧👷‍♂️🚧
      - Ensure HSTS Header is set
      - Ensure SSLv2 is Disabled
      - Ensure SSLv3 is Disabled
