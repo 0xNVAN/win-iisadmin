@@ -8,47 +8,48 @@ SSL Rating Guide: https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Gui
 
 1. [IIS BASIC HARDENING CHECKLIST]  
 
-Ensure web content is on non-system partition
-Ensure ‘host headers’ are on all sites  >> **INSTRUCTIONS BELOW**
-Ensure ‘directory browsing’ is set to disabled
-Ensure ‘application pool identity’ is configured for all application pools
-Ensure ‘unique application pools’ is set for sites
-Ensure ‘application pool identity’ is configured for all application pools
-Ensure WebDav feature is disabled Ensure HTTP is redirected to HTTPS
-Request Filtering and Other Restriction Modules
-Ensure ‘maxAllowedContentLength’ is configured
-Ensure ‘maxURL request filter’ is configured
-Ensure ‘MaxQueryString request filter’ is configured
-Ensure non-ASCII characters in URLs are not allowed
-Ensure Double-Encoded requests will be rejected
-Ensure ‘HTTP Trace Method’ is disabled
-Ensure Unlisted File Extensions are not allowed
-Ensure Handler is not granted Write and Script/Execute
-Ensure ‘notListedCgisAllowed’ is set to false
-Ensure ‘Dynamic IP Address Restrictions’ is enabled
-IIS Logging Recommendations
-Ensure Default IIS web log location is moved
-Ensure Advanced IIS logging is enabled
-Ensure ‘ETW Logging’ is enabled
-Transport Encryption
-Ensure HSTS Header is set
-
-**INSTRUCTIONS BELOW**
-Ensure SSLv2 is Disabled
-Ensure SSLv3 is Disabled
-Ensure TLS 1.0 is Disabled
-Ensure TLS 1.1 is Disabled
-Ensure TLS 1.2 is Enabled
-Ensure NULL Cipher Suites is Disabled
-Ensure DES Cipher Suites is Disabled
-Ensure RC4 Cipher Suites is Disabled
-Ensure AES 128/128 Cipher Suite is Disabled
-Ensure AES 256/256 Cipher Suite is Enabled
-Ensure TLS Cipher Suite ordering is Configured
+- [ ] Ensure web content is on non-system partition
+- [x] Ensure ‘host headers’ are on all sites
+- [ ] Ensure ‘directory browsing’ is set to disabled
+- [ ] Ensure ‘application pool identity’ is configured for all application pools
+- [ ] Ensure ‘unique application pools’ is set for sites
+- [ ] Ensure ‘application pool identity’ is configured for all application pools
+- [ ] Ensure WebDav feature is disabled Ensure HTTP is redirected to HTTPS
+- [ ] Request Filtering and Other Restriction Modules
+- [ ] Ensure ‘maxAllowedContentLength’ is configured
+- [ ] Ensure ‘maxURL request filter’ is configured
+- [ ] Ensure ‘MaxQueryString request filter’ is configured
+- [ ] Ensure non-ASCII characters in URLs are not allowed
+- [ ] Ensure Double-Encoded requests will be rejected
+- [ ] Ensure ‘HTTP Trace Method’ is disabled
+- [ ] Ensure Unlisted File Extensions are not allowed
+- [ ] Ensure Handler is not granted Write and Script/Execute
+- [ ] Ensure ‘notListedCgisAllowed’ is set to false
+- [ ] Ensure ‘Dynamic IP Address Restrictions’ is enabled
+- [ ] IIS Logging Recommendations
+- [ ] Ensure Default IIS web log location is moved
+- [ ] Ensure Advanced IIS logging is enabled
+- [ ] Ensure ‘ETW Logging’ is enabled
+- [WIP] Transport Encryption
+     - Ensure HSTS Header is set
+     - Ensure SSLv2 is Disabled
+     - Ensure SSLv3 is Disabled
+     - Ensure TLS 1.0 is Disabled
+     - Ensure TLS 1.1 is Disabled
+     - Ensure TLS 1.2 is Enabled
+     - Ensure NULL Cipher Suites is Disabled
+     - Ensure DES Cipher Suites is Disabled
+     - Ensure RC4 Cipher Suites is Disabled
+     - Ensure AES 128/128 Cipher Suite is Disabled
+     - Ensure AES 256/256 Cipher Suite is Enabled
+     - Ensure TLS Cipher Suite ordering is Configured
 
 </pre>
 
-[UPDATING HTTP HOST HEADERS]
+
+[ENSURE HOST HEADERS ON ALL SITES]
+
+Update all HTTP host headers as they may respond with server details
 
 CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 
@@ -77,6 +78,8 @@ Validation Testing on from external
 5. Check Location and confirm **HOSTNAME** is being sent instead of IP address
 
 
-[UPDATING WINDOWS IIS SCHANNEL AND CIPHER SUITES]
+[TRANSPORT ENCRYPTION]
+
+Update Windows IIS SCHANNEL and CIPHER SUITES to ensure secure encryption
 
 **WIP**
