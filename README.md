@@ -50,8 +50,9 @@ Update all HTTP host headers as they may respond with server details
 CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 
 1. Open CMD.exe as admin in IIS folder [C:\Windows\System32\inetsrv]
-2. Type: appcmd.exe set config -section:system.webServer/serverRuntime /alternateHostName:”HOSTNAME”  /commit:apphost
-3. Replace HOSTNAME internet facing DNS
+2. Update the HTTP head by typing the below, replacing HOSTNAME with the internet facing DNS: 
+ 
+     appcmd.exe set config -section:system.webServer/serverRuntime /alternateHostName:”HOSTNAME”  /commit:apphost
 
 
 #### Validation Testing on Android
