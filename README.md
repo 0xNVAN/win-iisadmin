@@ -6,6 +6,11 @@ For extensive reading see the [SSL Labs document page](https://www.ssllabs.com/p
 
 ## [IIS BASIC HARDENING CHECKLIST]  
 
+
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+- [ ] 
 [ ] Ensure web content is on non-system partition
 [x] Ensure ‘host headers’ are on all sites
 [ ] Ensure ‘directory browsing’ is set to disabled
