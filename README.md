@@ -1,15 +1,16 @@
 # win-iisadmin
-Windows IIS admin
+
+# Windows IIS admin
 
 For extensive reading go to: https://www.ssllabs.com/projects/documentation
 SSL Rating Guide: https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide
 
 <pre>
 
-1. [IIS BASIC HARDENING CHECKLIST]  
+## [IIS BASIC HARDENING CHECKLIST]  
 
-- [ ] Ensure web content is on non-system partition
-- [x] Ensure ‘host headers’ are on all sites
+[ ] Ensure web content is on non-system partition
+[x] Ensure ‘host headers’ are on all sites
 - [ ] Ensure ‘directory browsing’ is set to disabled
 - [ ] Ensure ‘application pool identity’ is configured for all application pools
 - [ ] Ensure ‘unique application pools’ is set for sites
@@ -47,7 +48,7 @@ SSL Rating Guide: https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Gui
 </pre>
 
 
-[ENSURE HOST HEADERS ON ALL SITES]
+### [ENSURE HOST HEADERS ON ALL SITES]
 
 Update all HTTP host headers as they may respond with server details
 
@@ -58,7 +59,7 @@ CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 3. Replace HOSTNAME internet facing DNS
 
 
-Validation Testing on Android
+#### Validation Testing on Android
 
 1. Download Termux on Android GooglePlay: https://play.google.com/store/apps/details?id=com.termux
 2. Open terminal and install the latest wget package by executing: **pkg install wget**
@@ -69,7 +70,7 @@ Validation Testing on Android
 7. Optional: If testing various content files or locations, repeat steps 4-6 until satisfied
 
 
-Validation Testing on from external
+#### Validation Testing on from external
 
 1. Go to SSL Labs Server Test: https://www.ssllabs.com/ssltest/index.html
 2. Type in **HOSTNAME** and then Submit the request
@@ -78,8 +79,8 @@ Validation Testing on from external
 5. Check Location and confirm **HOSTNAME** is being sent instead of IP address
 
 
-[TRANSPORT ENCRYPTION]
+### [TRANSPORT ENCRYPTION]
 
 Update Windows IIS SCHANNEL and CIPHER SUITES to ensure secure encryption
 
-**WIP**
+#### **WIP**
