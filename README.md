@@ -77,6 +77,7 @@ CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 ### [TRANSPORT ENCRYPTION]
 
 Update Windows IIS SCHANNEL and CIPHER SUITES to ensure secure encryption
+
 [SSL Rating Guide](https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide)
 
 #### **WIP**
