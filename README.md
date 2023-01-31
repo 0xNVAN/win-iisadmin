@@ -6,6 +6,7 @@ For extensive reading see the [SSL Labs document page](https://www.ssllabs.com/p
 
 ## [IIS BASIC HARDENING CHECKLIST]  
 
+- [X] Apply common CVE registry changes 🚧👷‍♂️🚧
 - [ ] Ensure web content is on non-system partition
 - [x] Ensure ‘host headers’ are on all sites :tada:
 - [ ] Ensure ‘directory browsing’ is set to disabled
