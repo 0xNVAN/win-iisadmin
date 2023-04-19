@@ -50,24 +50,51 @@ Update all HTTP host headers as they may respond with server details
 
 CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 
-1. Open CMD.exe as admin in the IIS folder [default location: 'cd C:\Windows\System32\inetsrv']
-2. Update the HTTP head by typing the below, replacing HOSTNAME with the internet facing DNS: 
+1. Open CMD.exe as admin in the IIS folder
+2. Alternatively, navigate into the default IIS folder
+ 
+ `cd C:\Windows\System32\inetsrv`
+
+3. Update the HTTP head by typing the below, replacing HOSTNAME with the internet facing DNS: 
 
  `appcmd.exe set config -section:system.webServer/serverRuntime /alternateHostName:”HOSTNAME”  /commit:apphost`
  
 
 #### Validation Testing on Android
 
-1. Download Termux on Android GooglePlay: https://play.google.com/store/apps/details?id=com.termux
-2. Open terminal and install the latest wget package by executing: **pkg install wget**
+1. Download [Termux](https://play.google.com/store/apps/details?id=com.termux) from the Android GooglePlay: https://play.google.com/store/apps/details?id=com.termux
+2. Open terminal and install the latest wget package by executing:
+     `pkg install wget`
+     
 3. Install the latest openssl pacakges by executing: **pkg install openssl**
+     `pkg install openssl`
+
 4. To open a TLS session exexcute: **openssl s_client -connect HOSTNAME:443**
-5. Create an image request using HTTP 1.0 by executing: GET /image HTTP/1.0
-6. HTTP header should show location as **HOSTNAME** (rather than the IP address)
-7. Optional: If testing various content files or locations, repeat steps 4-6 until satisfied
+     `openssl s_client -connect HOSTNAME:443`
 
+7. Create an image request using HTTP 1.0 by executing: 
+     `GET /image HTTP/1.0`
 
-#### Validation Testing on from external
+9. HTTP header should reply with a **HOSTNAME** (rather than the IP address)
+10. Optional: If testing with various protocols or phishing for HTTP responses, repeat steps 4-6 until satisfied
+
+#### Validation Testing on iOS
+
+1. Download [iSH Shell](https://apps.apple.com/us/app/ish-shell/id1436902243) from the Apple AppStore: https://apps.apple.com/us/app/ish-shell/id1436902243
+     
+2. Install the latest openssl pacakges by executing:
+     `apk add openssl`
+
+4. To open a TLS session exexcute: **openssl s_client -connect HOSTNAME:443**
+     `openssl s_client -connect HOSTNAME:443`
+
+7. Create an image request using HTTP 1.0 by executing: 
+     `GET /image HTTP/1.0`
+
+9. HTTP header should reply with a **HOSTNAME** (rather than the IP address)
+10. Optional: If testing with various protocols or phishing for HTTP responses, repeat steps 4-6 until satisfied
+
+#### Validation Testing on from an external website
 
 1. Go to SSL Labs Server Test: https://www.ssllabs.com/ssltest/index.html
 2. Type in **HOSTNAME** and then Submit the request
