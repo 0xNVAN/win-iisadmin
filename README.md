@@ -64,15 +64,19 @@ CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 
 1. Download [Termux](https://play.google.com/store/apps/details?id=com.termux) from the Android GooglePlay: https://play.google.com/store/apps/details?id=com.termux
 2. Open terminal and install the latest wget package by executing:
+
      `pkg install wget`
      
-3. Install the latest openssl pacakges by executing: **pkg install openssl**
+4. Install the latest openssl pacakge
+ 
      `pkg install openssl`
 
-4. To open a TLS session exexcute: **openssl s_client -connect HOSTNAME:443**
+4. To open a TLS session
+
      `openssl s_client -connect HOSTNAME:443`
 
-7. Create an image request using HTTP 1.0 by executing: 
+5. Create an image request using HTTP 1.0 by executing:
+
      `GET /image HTTP/1.0`
 
 9. HTTP header should reply with a **HOSTNAME** (rather than the IP address)
@@ -82,17 +86,20 @@ CVE-2000-0649 FIX - Microsoft IIS Internal IP Address Disclosure Vulnerability
 
 1. Download [iSH Shell](https://apps.apple.com/us/app/ish-shell/id1436902243) from the Apple AppStore: https://apps.apple.com/us/app/ish-shell/id1436902243
      
-2. Install the latest openssl pacakges by executing:
+2. Install the latest openssl pacakge
+
      `apk add openssl`
 
-4. To open a TLS session exexcute: **openssl s_client -connect HOSTNAME:443**
+4. To open a TLS session exexcute
+
      `openssl s_client -connect HOSTNAME:443`
 
-7. Create an image request using HTTP 1.0 by executing: 
+5. Create an image request using HTTP 1.0
+
      `GET /image HTTP/1.0`
 
-9. HTTP header should reply with a **HOSTNAME** (rather than the IP address)
-10. Optional: If testing with various protocols or phishing for HTTP responses, repeat steps 4-6 until satisfied
+6. HTTP header should reply with a **HOSTNAME** (rather than the IP address)
+7. Optional: If testing with various protocols or phishing for HTTP responses, repeat steps 4-6 until satisfied
 
 #### Validation Testing on from an external website
 
